@@ -1,26 +1,27 @@
 {
-  "name": "rit-event-portal",
-  "version": "1.0.0",
-  "private": true,
-  "engines": {
-    "node": "22.x"
-  },
-  "scripts": {
-    "build": "prisma generate --schema=server/prisma/schema.prisma && node scripts/prepare-vercel-public.js",
-    "start": "node server.js",
-    "dev": "node server.js"
-  },
-  "dependencies": {
-    "@prisma/client": "^6.19.3",
-    "bcryptjs": "^3.0.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2",
-    "morgan": "^1.10.0",
-    "multer": "^2.0.2"
-  },
-  "devDependencies": {
-    "prisma": "^6.19.3"
-  }
+    "name":  "rit-event-portal",
+    "version":  "1.0.0",
+    "private":  true,
+    "engines":  {
+                    "node":  "22.x"
+                },
+    "scripts":  {
+                    "build":  "prisma generate --schema=server/prisma/schema.prisma \u0026\u0026 node scripts/prepare-vercel-public.js",
+                    "start":  "node server.js",
+                    "dev":  "node server.js",
+                    "postinstall":  "prisma generate --schema=server/prisma/schema.prisma"
+                },
+    "dependencies":  {
+                         "@prisma/client":  "^6.19.3",
+                         "bcryptjs":  "^3.0.2",
+                         "cors":  "^2.8.5",
+                         "dotenv":  "^16.4.7",
+                         "express":  "^4.21.2",
+                         "jsonwebtoken":  "^9.0.2",
+                         "morgan":  "^1.10.0",
+                         "multer":  "^2.0.2"
+                     },
+    "devDependencies":  {
+                            "prisma":  "^6.19.3"
+                        }
 }
